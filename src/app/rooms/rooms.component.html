@@ -20,3 +20,12 @@
     </table>
    </div>
 </div>
+<br>
+<div>
+    <input type="text" #data  [(ngModel)]="userInput"  /> <button (click)="Submit()">Search</button>
+</div>
+<div [ngSwitch]="role">
+    <div *ngSwitchCase="'user'">Welocme User</div>
+    <div *ngSwitchCase="'admin'">Welocme Admin</div>
+    <div *ngSwitchDefault>Welocme Guest</div>
+</div>

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Room, RoomList } from './rooms';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-rooms',
@@ -9,6 +10,8 @@ import { Room, RoomList } from './rooms';
 export class RoomsComponent {
 
   isvisible = false;
+  userInput:string = '';
+  role:string = '';
 
   rooms:Room = {
     totalRooms : 10,
@@ -43,9 +46,16 @@ export class RoomsComponent {
     },
   ]
 
+
+
   onClick(){
 
      this.isvisible = !this.isvisible;
+  }
+  Submit(){
+    //console.log(#data)
+    this.role = this.userInput;
+
   }
 
 }
