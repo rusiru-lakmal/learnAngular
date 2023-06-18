@@ -1,23 +1,7 @@
 <button (click)="onClick()">Click me</button>
 <div *ngIf="isvisible">
    <div>
-    <table>
-        <tr>
-            <th>even/odd</th>
-            <th>Room Name</th>
-            <th>Room Type</th>
-            <th>Room Price</th>
-            <th>Room Status</th>
-            <th>Room Image</th>
-        </tr>
-        <tr [ngClass]=" e? 'even' : 'odd'" *ngFor="let room of roomList | slice : 0:2 ; let e = even ; let o = odd">
-            <td>{{e ? "Even" : "Odd"}}</td>
-            <td>{{room.roomNumber}}</td>
-            <td>{{room.roomType}}</td>
-            <td>{{room.roomPrice | currency}}</td>
-            <td [ngStyle]="{ 'color':room?.roomStatus?'white' :'blue' }">{{room.roomStatus}}</td>
-            <td>{{room.roomImage}}</td>
-    </table>
+    <app-rooms-list  [rooms]="roomList "></app-rooms-list>
    </div>
 </div>
 <br>

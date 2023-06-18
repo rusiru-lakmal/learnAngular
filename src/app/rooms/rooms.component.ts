@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Room, RoomList } from './rooms';
 import { FormsModule } from '@angular/forms';
 
@@ -7,7 +7,7 @@ import { FormsModule } from '@angular/forms';
   templateUrl: './rooms.component.html',
   styleUrls: ['./rooms.component.scss']
 })
-export class RoomsComponent {
+export class RoomsComponent implements OnInit {
 
   isvisible = false;
   userInput:string = '';
@@ -18,7 +18,10 @@ export class RoomsComponent {
     availableRooms : 5,
     bookedRooms : 5,
   }
-
+  constructor() { }
+  ngOnInit(): void {
+    
+  }
   roomList : RoomList[] = [
     {
       roomNumber : 101,
