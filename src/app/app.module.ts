@@ -8,17 +8,9 @@ import { FormsModule } from '@angular/forms';
 import { RoomsListComponent } from './rooms-list/rooms-list.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    RoomsComponent,
-    RoomsListComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule
-  ],
+  declarations: [AppComponent, RoomsComponent, RoomsListComponent],
+  imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

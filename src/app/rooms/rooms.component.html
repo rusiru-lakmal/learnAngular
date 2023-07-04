@@ -1,15 +1,16 @@
 <button (click)="onClick()">Click me</button>
 <div *ngIf="isvisible">
-   <div>
-    <app-rooms-list  [rooms]="roomList "></app-rooms-list>
-   </div>
+  <div>
+    <app-rooms-list [rooms]="roomList"></app-rooms-list>
+  </div>
 </div>
-<br>
+<br />
 <div>
-    <input type="text" #data  [(ngModel)]="userInput"  /> <button (click)="Submit()">Search</button>
+  <input type="text" #data [(ngModel)]="userInput" />
+  <button (click)="Submit()">Search</button>
 </div>
 <div [ngSwitch]="role">
-    <div *ngSwitchCase="'user'">Welocme User</div>
-    <div *ngSwitchCase="'admin'">Welocme Admin</div>
-    <div *ngSwitchDefault>Welocme Guest</div>
+  <div *ngSwitchCase="'user'">Welocme User</div>
+  <div *ngSwitchCase="'admin'">Welocme Admin</div>
+  <div *ngSwitchDefault>Welocme Guest</div>
 </div>
