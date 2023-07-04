@@ -1,7 +1,10 @@
 <button (click)="onClick()">Click me</button>
 <div *ngIf="isvisible">
   <div>
-    <app-rooms-list [rooms]="roomList"></app-rooms-list>
+    <app-rooms-list
+      [rooms]="roomList"
+      (selectedRoom)="selectRoom($event)"
+    ></app-rooms-list>
   </div>
 </div>
 <br />

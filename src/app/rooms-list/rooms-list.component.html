@@ -6,6 +6,7 @@
     <th>Room Price</th>
     <th>Room Status</th>
     <th>Room Image</th>
+    <th>Select Room</th>
   </tr>
   <tr
     [ngClass]="e ? 'even' : 'odd'"
@@ -19,5 +20,8 @@
       {{ room.roomStatus }}
     </td>
     <td>{{ room.roomImage }}</td>
+    <td>
+      <button (click)="selectRoom(room)">Select</button>
+    </td>
   </tr>
 </table>

@@ -56,4 +56,7 @@ export class RoomsComponent implements OnInit {
     //console.log(#data)
     this.role = this.userInput;
   }
+  selectRoom(room: RoomList) {
+    console.log(room);
+  }
 }
